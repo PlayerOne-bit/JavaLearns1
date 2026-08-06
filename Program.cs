@@ -193,15 +193,16 @@ public class Program
         if (!player1.isAlive())
         {
             Console.WriteLine($"{player2.getCharacter()} WINS!!!");
-            StateKnight("WIN DEAD");
+            StateKnight("DEAD WIN");
         }else if (!player2.isAlive())
         {
-            Console.WriteLine($"{player2.getCharacter()} WINS!!!");
-            StateKnight("DEAD WIN");
+            Console.WriteLine($"{player1.getCharacter()} WINS!!!");
+            StateKnight("WIN DEAD");
         }
-        else
+        else if (!player1.isAlive() && !player2.isAlive())
         {
-            Console.WriteLine("ERROR");
+            Console.WriteLine("Both Dead");
+            StateKnight("BOTH DEAD");
         }
 
     }
@@ -272,6 +273,9 @@ public class Program
                       +
                      /\     /--+--O
                      """);
+                break;
+            case "BOTH DEAD":
+                Console.WriteLine("O--+--\\  /--+--O");
                 break;
         }
     }
