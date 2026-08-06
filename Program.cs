@@ -185,16 +185,12 @@ public class Program
             Thread.Sleep(1000);
             Console.Clear();
         } while (player1.isAlive() && player2.isAlive());
-
-        Console.WriteLine($"""
-                {player1.getCharacter()}: {player1.showHP()}
-                {player2.getCharacter()}: {player2.showHP()}
-                """);
         if (!player1.isAlive())
         {
             Console.WriteLine($"{player2.getCharacter()} WINS!!!");
             StateKnight("DEAD WIN");
-        }else if (!player2.isAlive())
+        }
+        else if (!player2.isAlive())
         {
             Console.WriteLine($"{player1.getCharacter()} WINS!!!");
             StateKnight("WIN DEAD");
@@ -204,6 +200,11 @@ public class Program
             Console.WriteLine("Both Dead");
             StateKnight("BOTH DEAD");
         }
+        Console.WriteLine($"""
+                {player1.getCharacter()}: {player1.showHP()}
+                {player2.getCharacter()}: {player2.showHP()}
+                """);
+        
 
     }
     public static void StateKnight(string state)
@@ -299,6 +300,11 @@ class Knight
     }
     public bool isAlive()
     {
+        if (this.HP<=0)
+        {
+            this.HP=0;
+        }
+
         return this.HP > 0;
     }
     public string getCharacter()
