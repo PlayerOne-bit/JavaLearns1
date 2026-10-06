@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PriceController">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="-10.0" layoutY="-2.0" prefHeight="120.0" prefWidth="978.0" style="-fx-background-color: linear-gradient(to bottom right, #1E3C72, #2A5298,skyblue);">
+         <children>
+            <ImageView fitHeight="104.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="85.0" fitWidth="180.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/title.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      
+      <AnchorPane layoutX="21.0" layoutY="202.0" prefHeight="369.0" prefWidth="916.0" style="-fx-border-color: gray;">
+         <children>
+            <Label layoutX="106.0" layoutY="5.0" prefHeight="43.0" prefWidth="477.0" text="Booking Summary:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="40.0" layoutX="56.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/flighticon.png" />
+               </image>
+            </ImageView>
+            
+            <ScrollPane layoutX="43.0" layoutY="58.0" prefHeight="278.0" prefWidth="831.0" style="-fx-background-color: #76a3d6;">
+               <content>
+                  <VBox fx:id="summaryContainer" alignment="TOP_CENTER" prefHeight="270.0" prefWidth="815.0" spacing="15.0" style="-fx-background-color: #76a3d6;">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <children>
+            
+                        <!-- Total price label -->
+                        <Label fx:id="totalPriceLabel" prefHeight="25.0" prefWidth="831.0" text="Total Price: ₱0.00">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/paygcash.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+
+                        <!-- Error Label -->
+            <Label fx:id="errorLabel" layoutX="6.0" layoutY="335.0" prefHeight="20.0" prefWidth="831.0" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      
+      <Circle fill="DODGERBLUE" layoutX="266.0" layoutY="164.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="506.0" layoutY="163.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="750.0" layoutY="166.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+      
+      <Line endX="72.0" endY="-4.0" layoutX="403.0" layoutY="167.0" startX="-106.0" startY="-3.0" stroke="DODGERBLUE" strokeWidth="5.0" />
+      <Line endX="61.0" endY="-3.0" layoutX="658.0" layoutY="167.0" startX="-121.0" startY="-4.0" stroke="DODGERBLUE" strokeWidth="5.0" />
+      
+      <Label layoutX="258.0" layoutY="145.0" text="1" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="497.0" layoutY="139.0" text="2" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="740.0" layoutY="139.0" text="3" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      
+      <Button layoutX="587.0" layoutY="587.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="43.0" prefWidth="161.0" styleClass="blue" stylesheets="@application.css" text="CONFIRM" textFill="WHITE" />
+      <Button layoutX="268.0" layoutY="585.0" mnemonicParsing="false" onAction="#cancel" prefHeight="43.0" prefWidth="161.0" styleClass="gray" stylesheets="@application.css" text="PREVIOUS" />
+   </children>
+</AnchorPane>

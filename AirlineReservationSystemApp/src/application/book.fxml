@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BookController">
+   <children>
+      <!-- Header -->
+      <HBox alignment="CENTER_LEFT" layoutX="-10.0" layoutY="-2.0" prefHeight="120.0" prefWidth="978.0" style="-fx-background-color: linear-gradient(to bottom right, #1E3C72, #2A5298,skyblue);">
+         <children>
+            <ImageView fitHeight="104.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="85.0" fitWidth="180.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/title.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      
+      <!-- Progress Indicator -->
+      <Circle fill="DODGERBLUE" layoutX="266.0" layoutY="164.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#d0d0d0" layoutX="506.0" layoutY="163.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#d0d0d0" layoutX="750.0" layoutY="166.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line endX="72.0" endY="-4.0" layoutX="403.0" layoutY="167.0" startX="-106.0" startY="-3.0" stroke="#d0d0d0" strokeWidth="5.0" />
+      <Line endX="61.0" endY="-3.0" layoutX="658.0" layoutY="167.0" startX="-121.0" startY="-4.0" stroke="#d0d0d0" strokeWidth="5.0" />
+      <Label layoutX="258.0" layoutY="145.0" text="1" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="497.0" layoutY="139.0" text="2">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="740.0" layoutY="139.0" text="3">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      
+      <!-- Passenger Details Form -->
+      <AnchorPane layoutX="21.0" layoutY="202.0" prefHeight="369.0" prefWidth="916.0" style="-fx-border-color: gray; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="106.0" layoutY="5.0" prefHeight="43.0" prefWidth="477.0" text="Passenger Details:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="40.0" layoutX="56.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/profile_icon.png" />
+               </image>
+            </ImageView>
+            
+            <AnchorPane layoutX="43.0" layoutY="58.0" prefHeight="278.0" prefWidth="831.0" style="-fx-background-color: #76a3d6; -fx-background-radius: 10;">
+               <children>
+                  <GridPane hgap="50.0" layoutX="27.0" layoutY="2.0" prefHeight="266.0" prefWidth="764.0" vgap="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="347.6666564941406" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="366.3333435058594" minWidth="10.0" prefWidth="346.3333435058594" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <!-- Full Name -->
+                        <Label text="Full Name:">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="name" prefHeight="30.0" prefWidth="306.0" promptText="Enter full name" style="-fx-background-radius: 8;" GridPane.rowIndex="1" />
+                        
+                        <!-- Contact Number -->
+                        <Label text="Contact Number:" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="contact_number" prefHeight="30.0" prefWidth="306.0" promptText="Enter contact number" style="-fx-background-radius: 8;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        
+                        <!-- Email Address -->
+                        <Label text="Email Address:" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="email_address" prefHeight="30.0" prefWidth="306.0" promptText="Enter email address" style="-fx-background-radius: 8;" GridPane.rowIndex="3" />
+                        
+                        <!-- Date of Birth -->
+                        <Label text="Date of Birth:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="date_of_birth" maxWidth="1.7976931348623157E308" prefHeight="30.0" style="-fx-background-radius: 8;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        
+                        <!-- Passport Number -->
+                        <Label text="Passport Number:" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="passport_number" prefHeight="30.0" prefWidth="306.0" promptText="Enter passport number" style="-fx-background-radius: 8;" GridPane.rowIndex="5" />
+                        
+                        <!-- Passenger Counter and Submit -->
+                        <AnchorPane prefHeight="34.0" prefWidth="347.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <children>
+                              <Label fx:id="passenger" alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="-2.0" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="210.0" text="1 of 1 Passenger" textFill="#1E3C72">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="submitButton" alignment="CENTER" layoutX="213.0" layoutY="6.0" mnemonicParsing="false" onAction="#submit" prefHeight="31.0" prefWidth="145.0" styleClass="black" stylesheets="@application.css" text="SUBMIT" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        
+                        <!-- Passenger Label -->
+                        <Label fx:id="error" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="27.0" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      
+      <!-- Bottom Buttons -->
+      <Button layoutX="268.0" layoutY="585.0" mnemonicParsing="false" onAction="#cancel" prefHeight="43.0" prefWidth="161.0" styleClass="gray" stylesheets="@application.css" text="CANCEL">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="nextButton" layoutX="587.0" layoutY="587.0" mnemonicParsing="false" onAction="#next" prefHeight="43.0" prefWidth="161.0" styleClass="blue" stylesheets="@application.css" text="NEXT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

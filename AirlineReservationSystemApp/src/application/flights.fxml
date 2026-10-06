@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FlightController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="650.0" prefWidth="248.0" style="-fx-background-color: linear-gradient(to bottom right, #1E3C72, #2A5298,skyblue); -fx-padding: 0 0 0 10; -fx-background-radius: 0 25 25 0;">
+         <children>
+            <ImageView fitHeight="85.0" fitWidth="180.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/title.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="104.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <Button alignment="CENTER" graphicTextGap="8.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#mainpage" prefHeight="52.0" prefWidth="162.0" style="-fx-background-radius: 100 0 0 100;" styleClass="dashboardBtn" stylesheets="@application.css" text="HOME PAGE" VBox.vgrow="ALWAYS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/homeicon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" graphicTextGap="5.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="52.0" prefWidth="162.0" style="-fx-background-radius: 100 0 0 100; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 2, 2); -fx-background-color: white; -fx-text-fill: linear-gradient(to right, #1E3C72, #2A5298);" styleClass="dashboardBtn" stylesheets="@application.css" text="BOOK FLIGHT" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" rotate="90.0">
+                     <image>
+                        <Image url="@images/flighticon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" graphicTextGap="20.0" layoutX="10.0" layoutY="404.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#schedule" prefHeight="52.0" prefWidth="162.0" style="-fx-background-radius: 100 0 0 100;" styleClass="dashboardBtn" stylesheets="@application.css" text="SCHEDULE" VBox.vgrow="ALWAYS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/schedule_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" graphicTextGap="27.0" layoutX="10.0" layoutY="456.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#settings" prefHeight="52.0" prefWidth="162.0" style="-fx-background-radius: 100 0 0 100;" styleClass="dashboardBtn" stylesheets="@application.css" text="SETTINGS" VBox.vgrow="ALWAYS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/settingicon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="950.0" HBox.hgrow="ALWAYS">
+         <children>
+            <GridPane layoutX="40.0" layoutY="20.0" prefHeight="280.0" prefWidth="870.0" style="-fx-background-color: rgb(175, 196, 236); -fx-background-radius: 25;" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Departure City:" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ChoiceBox fx:id="departureCity" maxWidth="1.7976931348623157E308" prefHeight="35.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="10.0" />
+                     </GridPane.margin>
+                  </ChoiceBox>
+                  
+                  <Label text="Date of Departure:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <DatePicker fx:id="departureDate" maxWidth="1.7976931348623157E308" prefHeight="35.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </GridPane.margin>
+                  </DatePicker>
+                  
+                  <Label text="Arrival City:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ChoiceBox fx:id="arrivalCity" maxWidth="1.7976931348623157E308" prefHeight="35.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="10.0" />
+                     </GridPane.margin>
+                  </ChoiceBox>
+                  
+                  <Label text="Return Date:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <DatePicker fx:id="returnTime" maxWidth="1.7976931348623157E308" prefHeight="35.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </GridPane.margin>
+                  </DatePicker>
+                  
+                  <Label text="Travel Itinerary:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ChoiceBox fx:id="travelItinerary" maxWidth="1.7976931348623157E308" prefHeight="35.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="10.0" />
+                     </GridPane.margin>
+                  </ChoiceBox>
+                  
+                  <Label text="Passengers:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ChoiceBox fx:id="passengers" maxWidth="1.7976931348623157E308" prefHeight="35.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </GridPane.margin>
+                  </ChoiceBox>
+                  
+                  <Button maxHeight="40.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#searchFlight" prefHeight="40.0" styleClass="blue" stylesheets="@application.css" text="SEARCH FLIGHT" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="100.0" right="100.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </GridPane>
+            
+            <Label fx:id="error" alignment="CENTER" layoutX="40.0" layoutY="310.0" prefHeight="25.0" prefWidth="870.0" textFill="RED" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="310.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            
+            <TableView fx:id="flightTable" layoutX="40.0" layoutY="345.0" prefHeight="230.0" prefWidth="870.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="345.0">
+              <columns>
+                <TableColumn fx:id="flightNumberCol" editable="false" prefWidth="120.0" text="Flight Number" />
+                <TableColumn fx:id="originCol" editable="false" prefWidth="180.0" text="Departure City" />
+                  <TableColumn fx:id="destinationCol" editable="false" prefWidth="180.0" text="Arrival City" />
+                  <TableColumn fx:id="departureTimeCol" editable="false" prefWidth="130.0" text="Departure Time" />
+                  <TableColumn fx:id="arrivalTimeCol" editable="false" prefWidth="130.0" text="Arrival Time" />
+                  <TableColumn fx:id="seatsCol" editable="false" prefWidth="130.0" text="Available Seats" />
+              </columns>
+            </TableView>
+            
+            <HBox alignment="CENTER" layoutX="40.0" layoutY="585.0" prefHeight="50.0" prefWidth="870.0" spacing="15.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#bookSelectedFlight" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #2A5298;" text="BOOK SELECTED FLIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#clearForm" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #ff6b6b;" text="CLEAR FORM" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

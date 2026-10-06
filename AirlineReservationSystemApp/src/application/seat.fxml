@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SeatController">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="-10.0" layoutY="-2.0" prefHeight="120.0" prefWidth="978.0" style="-fx-background-color: linear-gradient(to bottom right, #1E3C72, #2A5298,skyblue);">
+         <children>
+            <ImageView fitHeight="104.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="85.0" fitWidth="180.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/title.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+
+      <AnchorPane layoutX="21.0" layoutY="150.0" prefHeight="480.0" prefWidth="916.0" style="-fx-border-color: gray;">
+         <children>
+            <Label layoutX="106.0" layoutY="5.0" prefHeight="43.0" prefWidth="477.0" text="Seat Plan:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="40.0" layoutX="56.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/seat.png" />
+               </image>
+            </ImageView>
+
+            <AnchorPane layoutX="43.0" layoutY="58.0" prefHeight="370.0" prefWidth="831.0" style="-fx-background-color: #76a3d6;">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="370.0" prefWidth="831.0" spacing="5.0" style="-fx-background-color: #76a3d6;">
+                     <children>
+                        <Label text="Select Your Seats" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+
+                        <HBox alignment="CENTER" spacing="12.0">
+                           <children>
+                              <HBox alignment="CENTER" spacing="4.0">
+                                 <children>
+                                    <Button disable="true" minHeight="18.0" minWidth="18.0" style="-fx-background-color: #90EE90; -fx-border-color: #444; -fx-border-width: 1px; -fx-background-radius: 3;" />
+                                    <Label text="Available" textFill="WHITE">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" spacing="4.0">
+                                 <children>
+                                    <Button disable="true" minHeight="18.0" minWidth="18.0" style="-fx-background-color: #4A90E2; -fx-border-color: #444; -fx-border-width: 2px; -fx-background-radius: 3;" />
+                                    <Label text="Selected" textFill="WHITE">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" spacing="4.0">
+                                 <children>
+                                    <Button disable="true" minHeight="18.0" minWidth="18.0" style="-fx-background-color: #FF6B6B; -fx-border-color: #444; -fx-border-width: 1px; -fx-background-radius: 3;" />
+                                    <Label text="Booked" textFill="WHITE">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+
+                        <ScrollPane fitToWidth="true" fitToHeight="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" prefHeight="250.0" prefWidth="820.0" style="-fx-background: transparent;">
+                           <content>
+                              <GridPane fx:id="seatGrid" alignment="CENTER" hgap="4.0" vgap="4.0" style="-fx-background-color: transparent;">
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="25.0" prefWidth="25.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="15.0" prefWidth="15.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                                 </columnConstraints>
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="5.0" />
+                                 </padding>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+
+                        <Label fx:id="statusLabel" text="Selected: 0 of 0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+
+            <Label fx:id="errorLabel" alignment="CENTER" layoutX="43.0" layoutY="440.0" prefHeight="20.0" prefWidth="831.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+
+      <Button layoutX="587.0" layoutY="600.0" mnemonicParsing="false" onAction="#next" prefHeight="43.0" prefWidth="161.0" styleClass="blue" stylesheets="@application.css" text="NEXT" textFill="WHITE" />
+      <Button layoutX="268.0" layoutY="600.0" mnemonicParsing="false" onAction="#cancel" prefHeight="43.0" prefWidth="161.0" styleClass="gray" stylesheets="@application.css" text="PREVIOUS" />
+   </children>
+</AnchorPane>

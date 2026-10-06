@@ -1,0 +1,102 @@
+.buttons{
+	-fx-background-color: linear-gradient(to right,  rgb(0, 100, 255),  blue);
+	-fx-border-color:skyblue;
+	-fx-border-radius:100 0 100 0;
+	-fx-background-radius:100 0 100 0;
+	-fx-border-width:0 2 2 0;
+	-fx-cursor:hand;
+}
+.buttons:hover{
+	-fx-background-color: linear-gradient(to left,  rgb(0, 100, 255),  rgb(139, 139, 255));
+	-fx-border-color: rgb(202, 240, 255);
+}
+
+.buttons:armed{
+	-fx-background-color: linear-gradient(to left,  rgb(0, 63, 158),  rgb(61, 61, 255));
+	-fx-border-color: rgb(202, 240, 255);
+}
+
+.inputs{
+	-fx-border-width: 0 2 2 0;
+	-fx-border-radius:10;
+	-fx-background-radius:10;
+	-fx-padding:5;
+	-fx-border-color:skyblue; 
+}
+
+#hallowBtn{
+	-fx-background-radius: 10;
+	-fx-border-radius:10;
+	-fx-border-color: darkblue;
+	-fx-border-width: 1;
+	-fx-text-fill: darkblue;
+	-fx-background-color:none;
+}
+#hallowBtn:hover{
+	-fx-background-color:skyblue;
+}
+#hallowBtn:armed{
+	-fx-background-color:rgb(42, 44, 173);
+	-fx-text-fill: white;
+}
+
+
+.dashboardBtn{
+	-fx-background-color: none;
+	-fx-text-fill:white;
+	-fx-background-radius: 100 0 0 100;
+}
+
+.dashboardBtn:hover{
+	-fx-text-fill:  linear-gradient(to right, #1E3C72, #2A5298);
+	-fx-effect:dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 2, 2);
+	-fx-background-color: rgb(112, 162, 255);
+}
+.dashboardBtn:armed{
+	-fx-background-color: dodgerblue;
+	-fx-text-fill: white;
+}
+
+.red{
+	-fx-background-color:  linear-gradient(to right, red, darkred);
+}
+
+.red:hover{
+	-fx-background-color:  linear-gradient(to right, rgb(255, 134, 134), rgb(255, 0, 0));
+}
+.red:armed{
+	-fx-background-color: linear-gradient(to right, rgb(153, 0, 0), rgb(68, 0, 0));
+}
+
+.gray{
+	-fx-background-color: linear-gradient(to bottom, white, lightgray);
+	-fx-border-color: lightgray;
+}
+.gray:hover{
+	-fx-background-color: linear-gradient(to bottom, rgb(218, 218, 218), rgb(146, 146, 146));
+}
+.gray:armed{
+	-fx-background-color: linear-gradient(to bottom, rgb(119, 119, 119), rgb(90, 90, 90));
+	-fx-text-fill: white;
+}
+
+.black{
+	-fx-background-color: linear-gradient(to bottom, black,darkgray);
+	-fx-text-fill:white;
+}
+.black:hover{
+	-fx-background-color: linear-gradient(to bottom, rgb(43, 43, 43),rgb(226, 226, 226));
+}
+.black:armed{
+	-fx-background-color: linear-gradient(to bottom, rgb(126, 126, 126),rgb(61, 61, 61));
+}
+
+.blue{
+	-fx-background-color: linear-gradient(to bottom, rgb(0, 98, 179), rgb(19, 156, 211));
+}
+.blue:hover{
+	-fx-background-color: linear-gradient(to bottom, rgb(0, 140, 255), rgb(75, 199, 248));
+}
+.blue:armed{
+	-fx-background-color: linear-gradient(to bottom, rgb(0, 51, 94), rgb(5, 79, 109));
+}
